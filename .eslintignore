@@ -1,0 +1,4 @@
+**/*.js
+build
+.expo
+node_modules/
