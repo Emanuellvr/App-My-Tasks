@@ -1,5 +1,5 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import {
+import React, {
   createContext,
   FunctionComponent,
   ReactElement,
@@ -40,7 +40,7 @@ export const TasksProvider: FunctionComponent<IProps> = ({ children }) => {
     };
 
     loadTasks();
-  }, [data]);
+  }, []);
 
   const addTask = async (task: ITask) => {
     try {

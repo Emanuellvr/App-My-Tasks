@@ -1,4 +1,5 @@
-import { TasksContext, TasksProvider } from "./src/context/TaskContext";
+import React from "react";
+import { TasksProvider } from "./src/context/TaskContext";
 import { Home } from "./src/pages/Home";
 
 const App = () => {

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   Platform,
   Text,
@@ -7,11 +7,9 @@ import {
   SafeAreaView,
   TextInput,
   TouchableOpacity,
-  FlatList,
-  StatusBar,
 } from "react-native";
 import { Tasklist } from "../../components/Tasklist";
-import { TasksContext, useTaskList } from "../../context/TaskContext";
+import { useTaskList } from "../../context/TaskContext";
 
 export const Home = () => {
   const [newTask, setNewTask] = useState("");
@@ -40,6 +38,7 @@ export const Home = () => {
         />
 
         <TouchableOpacity
+          testID="addButton"
           onPress={handleAddNewTask}
           activeOpacity={0.7}
           style={styles.button}
@@ -58,8 +57,7 @@ export const Home = () => {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "#f1f1f1",
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    backgroundColor: "#121214",
   },
   container: {
     flex: 1,
